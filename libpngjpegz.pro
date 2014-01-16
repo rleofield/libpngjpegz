@@ -24,6 +24,7 @@ QMAKE_CFLAGS_RELEASE += -Wall
 QMAKE_CFLAGS_RELEASE += -Wno-unused-parameter
 QMAKE_CFLAGS_RELEASE += -Wno-implicit-function-declaration
 
+message("qmake libpngjpegz")
 
 SOURCES += \
     png/pngwutil.c \

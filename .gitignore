@@ -1,15 +1,5 @@
-# Compiled Object files
-*.slo
-*.lo
-*.o
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-# Compiled Static libraries
-*.lai
-*.la
-*.a
 /.tmp/
-/Makefile
-/libpngjpegz.pro.user
+/save/
+/Release/
+/*.pro.user
+/*.a
