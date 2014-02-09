@@ -3,3 +3,4 @@
 /Release/
 /*.pro.user
 /*.a
+/Makefile
