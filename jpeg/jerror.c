@@ -19,6 +19,8 @@
  * These routines are used by both the compression and decompression code.
  */
 
+#include <stdlib.h>
+
 /* this is not a core library module, so it doesn't define JPEG_INTERNALS */
 #include "jinclude.h"
 #include "jpeglib.h"
@@ -80,7 +82,7 @@ error_exit (j_common_ptr cinfo)
   /* Let the memory manager delete any temp files before we die */
   jpeg_destroy(cinfo);
 
-  exit(EXIT_FAILURE);
+  exit (EXIT_FAILURE);
 }
 
 
