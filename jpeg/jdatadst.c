@@ -15,11 +15,14 @@
  * than 8 bits on your machine, you may need to do some tweaking.
  */
 
+#include <malloc.h>
+
 /* this is not a core library module, so it doesn't define JPEG_INTERNALS */
 #include "jinclude.h"
 #include "jpeglib.h"
 #include "jerror.h"
 
+#define HAVE_STDLIB_H
 #ifndef HAVE_STDLIB_H		/* <stdlib.h> should declare malloc(),free() */
 extern void * malloc JPP((size_t size));
 extern void free JPP((void *ptr));

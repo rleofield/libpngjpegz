@@ -25,6 +25,8 @@
  * memory then you shouldn't care about a little bit of unused code...)
  */
 
+#include <stdlib.h>
+
 #define JPEG_INTERNALS
 #define AM_MEMORY_MANAGER	/* we define jvirt_Xarray_control structs */
 #include "jinclude.h"
@@ -308,7 +310,7 @@ alloc_small (j_common_ptr cinfo, int pool_id, size_t sizeofobject)
       if (slop < MIN_SLOP)	/* give up when it gets real small */
 	out_of_memory(cinfo, 2); /* jpeg_get_small failed */
     }
-    mem->total_space_allocated += min_request + slop;
+    mem->total_space_allocated += (long)(min_request + slop);
     /* Success, initialize the new pool header and add to end of list */
     hdr_ptr->hdr.next = NULL;
     hdr_ptr->hdr.bytes_used = 0;

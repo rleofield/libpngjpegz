@@ -10,19 +10,21 @@ TARGET = pngjpegz
 TEMPLATE = lib
 CONFIG += staticlib
 
+CONFIG(debug, release|debug):DEFINES += DEBUG
+
 QMAKE_CFLAGS_DEBUG += -O0
 QMAKE_CFLAGS_RELEASE += -O2
 
 QMAKE_CFLAGS_DEBUG += -Wall
 QMAKE_CFLAGS_DEBUG += -Wno-type-limits
 QMAKE_CFLAGS_DEBUG += -Wno-unused-parameter
-QMAKE_CFLAGS_DEBUG += -Wno-implicit-function-declaration
+#QMAKE_CFLAGS_DEBUG += -Wno-implicit-function-declaration
 
 
 QMAKE_CFLAGS_RELEASE += -Wno-type-limits
 QMAKE_CFLAGS_RELEASE += -Wall
 QMAKE_CFLAGS_RELEASE += -Wno-unused-parameter
-QMAKE_CFLAGS_RELEASE += -Wno-implicit-function-declaration
+#QMAKE_CFLAGS_RELEASE += -Wno-implicit-function-declaration
 
 message("qmake libpngjpegz")
 
