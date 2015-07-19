@@ -35,9 +35,6 @@
 #define EXIT_FAILURE  1
 #endif
 
-#ifdef _WIN32
-#pragma warning( disable:4996 4100) // _CRT_SECURE_NO_WARNINGS
-#endif
 
 
 /*
